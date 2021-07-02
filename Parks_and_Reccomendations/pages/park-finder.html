@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Parks Finder</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div>
+    <!-- nav bar -->
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/pages/park-finder.html">Park Finder</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h1>Park Finder </h1>
+    <h2>Enter your preferences and we will find you the perfect park</h2>
+
+    <!-- Form -->
+    <form id="theform" action="../pages/results.html" method="POST" onsubmit="submitForm()">
+
+      <!-- Area -->
+      <label for="areacriteria">Area</label>
+      <select id="areacriteria" name="area">
+        <option value="North">North</option>
+        <option value="South">South</option>
+        <option value="East">East</option>
+        <option value="West">West</option>
+      </select>
+
+      <!-- Size -->
+      <label for="sizecriteria">Area</label>
+      <select id="sizecriteria" name="size">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+      </select>
+
+      <!-- Toilets -->
+      <label for="toiletcriteria">Toilets</label><br>
+      <input type="checkbox" id="toiletcriteria" name="criteria" value="toilets">
+      
+      <!-- Cafe -->
+      <label for="cafecriteria">Cafe</label><br>
+      <input type="checkbox" id="cafecriteria" name="criteria" value="cafe">
+      
+      <!-- Parking -->
+      <label for="parkingcriteria"> Parking</label>
+      <input type="checkbox" id="parkingcriteria" name="criteria" value="parking"> 
+    
+
+      <!-- Cyclist Friendly -->
+      <label for="cyclingcriteria">Cycling Friendly </label>
+      <input type="checkbox" id="cyclingcriteria" name="criteria" value="cycling"> 
+
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+    </form>
+      
+  </div>
+
+  <div>
+    <p>
+      <!-- Footer -->
+      Brought to you by Charlotte, Danielle, Emily, Francesca and Sapphire for Code First Girls
+    </p>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+  
+</html>
