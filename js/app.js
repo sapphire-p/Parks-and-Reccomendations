@@ -57,7 +57,9 @@ arrayOfParks.push(barnsburyWood);
 let form = document.querySelector("form");
 
 //Gets the options once the user has pressed submit
-let userinput = form.addEventListener("submit", function submitForm() {
+let userinput = submitForm()
+
+function submitForm() {
     
     //criteria
     let area = ""  // ('North' / 'South' / 'East' / 'West')
@@ -119,12 +121,12 @@ let userinput = form.addEventListener("submit", function submitForm() {
             }
         }
     
-
-return results
+    document.getElementById("results-text").innerHTML = results
     
-}, false);
 
-document.getElementById("results-text").innerHTML = userinput
+    return false
+}
+    
 
 
 
@@ -152,32 +154,27 @@ document.getElementById("results-text").innerHTML = userinput
 
 // FOR REFERENCE ONLY (we can delete later): this is what arrayOfParks looks like structurally, although a different method was used to build it:
 
-/*
-
-let arrayOfParks = [
-    {
-        name: "Greenwich Park",
-        area: "South",
-        size: Medium,
-        toilets: true,
-        cafe: true,
-        parking: true,
-        cyclistFriendly: true,
-        nearestStation: "North Greenwich",
-        description: "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London."
-    },
-    {
-        name: "Clapham Common",
-        area: "West",
-        size: Large,
-        toilets: true,
-        cafe: true,
-        parking: false,
-        cyclistFriendly: true,
-        nearestStation: "Clapham Common",
-        description: "Clapham Common is a large triangular urban park in Clapham, south London, England. It is 220 acres of green space, with three ponds and a Victorian bandstand."
-    }
-    ...etc.
-]
-
-*/
+// let arrayOfParks = [
+//     {
+//         name: "Greenwich Park",
+//         area: "South",
+//         size: Medium,
+//         toilets: true,
+//         cafe: true,
+//         parking: true,
+//         cyclistFriendly: true,
+//         nearestStation: "North Greenwich",
+//         description: "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London."
+//     },
+//     {
+//         name: "Clapham Common",
+//         area: "West",
+//         size: Large,
+//         toilets: true,
+//         cafe: true,
+//         parking: false,
+//         cyclistFriendly: true,
+//         nearestStation: "Clapham Common",
+//         description: "Clapham Common is a large triangular urban park in Clapham, south London, England. It is 220 acres of green space, with three ponds and a Victorian bandstand."
+//     },
+// ]
