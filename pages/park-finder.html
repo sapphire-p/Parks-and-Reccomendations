@@ -18,8 +18,8 @@
     <h1>Park Finder </h1>
     <h2>Enter your preferences and we will find you the perfect park</h2>
 
-    <!-- Form -->
-    <form id="theform" action="../pages/results.html" method="POST" onsubmit="submitForm()">
+    <!-- Form action="../pages/results.html" -->
+    <form id="theform"  method="GET" onsubmit="submitForm()">
 
       <!-- Area -->
       <label for="areacriteria">Area</label>
@@ -63,8 +63,13 @@
   </div>
 
   <div>
+    <p id='results-text'>Results Placeholder</p>
+  </div>
+
+  <div>
     <p>
       <!-- Footer -->
+      <div class="footer">
       Brought to you by Charlotte, Danielle, Emily, Francesca and Sapphire for Code First Girls
     </p>
   </div>

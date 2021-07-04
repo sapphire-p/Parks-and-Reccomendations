@@ -21,7 +21,6 @@ class ParkObject {
 
 let arrayOfParks = []; // This creates an empty array which will contain all of the park objects. When looking for parks that match given criteria, we can search through this array to find them.
 
-
 // Each of the below creates a new park object (using the ParkObject class template above)
 // The new park object is then pushed into the arrayOfParks array
 
@@ -54,39 +53,25 @@ arrayOfParks.push(barnsburyWood);
 
 //CRITERIA
 
-// This identifyPark function takes as its arguments the six criteria people specify:
-
-// GET RESULTS OF CRITERIA FROM FORM
-
-// Select all checkboxes with the name 'criteria' using querySelectorAll.
-var checkboxes = document.querySelectorAll("input[type=checkbox][name=criteria]");
-let enabledCriteria = []
-
-
 // Get the form from the document
 let form = document.querySelector("form");
 
 //Gets the options once the user has pressed submit
-// form.addEventListener("submit", 
-
-function submitform() {
-    // 1. area ('North' / 'South' / 'East' / 'West')
-    let area = ""
-    // 2. size ('Small' / 'Medium' / 'Large')
-    let size = ""
-    // 3. toilets (Boolean true or false)
-    let toilets = false
-    // 4. cafe (Boolean true or false)
-    let cafe  = false
-    // 5. parking (Boolean true or false)
-    let parking = false
-    // 6. cyclistFriendly (Boolean true or false)
-    let cyclistFriendly = false
-
-
+let userinput = form.addEventListener("submit", function submitForm() {
+    
+    //criteria
+    let area = ""  // ('North' / 'South' / 'East' / 'West')
+    let size = ""  //  ('Small' / 'Medium' / 'Large')
+    let toilets = false  // (Boolean true or false)
+    let cafe  = false // (Boolean true or false)
+    let parking = false // (Boolean true or false)
+    let cyclistFriendly = false // (Boolean true or false)
 
     area = document.getElementById("areacriteria").value;
     size = document.getElementById("sizecriteria").value;
+
+    var checkboxes = document.querySelectorAll("input[type=checkbox][name=criteria]"); // Select all checkboxes with the name 'criteria' using querySelectorAll.
+    let enabledCriteria = [] //empty array for enabled checkboxes
 
     checkboxes.forEach(function getCheckboxes() {
             enabledCriteria = 
@@ -104,7 +89,7 @@ function submitform() {
             cafe = true
             console.log('cafe:' + cafe )
         } else if (x == "parking") {
-            parking == true
+            parking = true
             console.log('parking' + parking)
         } else if (x == "cycling") {
             cyclistFriendly = true
@@ -112,32 +97,34 @@ function submitform() {
         }
     });
 
-    function identifyPark(area, size, toilets, cafe, parking, cyclistFriendly) {
-        let recommendation = [];
-        for (var i = 0; i < arrayOfParks.length; i++) {
-            if (arrayOfParks[i].area === area
-                && arrayOfParks[i].size === size
-                && arrayOfParks[i].toilets === toilets
-                && arrayOfParks[i].cafe === cafe
-                && arrayOfParks[i].parking === parking
-                && arrayOfParks[i].cyclistFriendly === cyclistFriendly
-            ) {
-                recommendation.push(`${arrayOfParks[i].name} (nearest station: ${arrayOfParks[i].nearestStation}) \n${arrayOfParks[i].description}`);
+    let results = identifyPark(area, size, toilets, cafe, parking, cyclistFriendly)
+
+        function identifyPark(area, size, toilets, cafe, parking, cyclistFriendly) {
+            let recommendation = [];
+            for (var i = 0; i < arrayOfParks.length; i++) {
+                if (arrayOfParks[i].area === area
+                    && arrayOfParks[i].size === size
+                    && arrayOfParks[i].toilets === toilets
+                    && arrayOfParks[i].cafe === cafe
+                    && arrayOfParks[i].parking === parking
+                    && arrayOfParks[i].cyclistFriendly === cyclistFriendly
+                ) {
+                    recommendation.push(`${arrayOfParks[i].name} (nearest station: ${arrayOfParks[i].nearestStation}) \n${arrayOfParks[i].description}`);
+                }
+            }
+            if (recommendation.length >= 1) {
+                return recommendation.join("\n \n");
+            } else {
+                return "Sorry, but we are unable to suggest a park that matches those specific criteria. Please try again.";
             }
         }
-        if (recommendation.length >= 1) {
-            return recommendation.join("\n \n");
-        } else {
-            return "Sorry, but we are unable to suggest a park that matches those specific criteria. Please try again.";
-        }
-    }
+    
 
-    let results = identifyPark(area, size, toilets, cafe, parking, cyclistFriendly)
-    document.getElementById("results-text").innerHTML = results
-    return false
-};
+return results
+    
+}, false);
 
-
+document.getElementById("results-text").innerHTML = userinput
 
 
 

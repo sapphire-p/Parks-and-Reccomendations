@@ -1,2 +1,47 @@
 /* CSS Styling to go in here */
 
+/* nav bar */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  /* need to choose font and figure out how to add house icon in place of home copy */
+
+  li a {
+    display: block;
+    border-radius: 30px;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 10px;
+    text-decoration: none;
+  }
+  
+  /* Changes the link color to light grey on hover */
+  li a:hover {
+    background-color: white;
+    border-color: #d3d3d3;
+    border: 2px solid grey;
+  }
+
+/* footer */
+
+  .footer {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      color: grey;
+  }
