@@ -57,8 +57,6 @@ arrayOfParks.push(barnsburyWood);
 let form = document.querySelector("form");
 
 //Gets the options once the user has pressed submit
-let userinput = submitForm()
-
 function submitForm() {
     
     //criteria
@@ -72,7 +70,7 @@ function submitForm() {
     area = document.getElementById("areacriteria").value;
     size = document.getElementById("sizecriteria").value;
 
-    var checkboxes = document.querySelectorAll("input[type=checkbox][name=criteria]"); // Select all checkboxes with the name 'criteria' using querySelectorAll.
+    let checkboxes = document.querySelectorAll("input[type=checkbox][name=criteria]"); // Select all checkboxes with the name 'criteria' using querySelectorAll.
     let enabledCriteria = [] //empty array for enabled checkboxes
 
     checkboxes.forEach(function getCheckboxes() {
@@ -86,21 +84,17 @@ function submitForm() {
     enabledCriteria.forEach(function findTrueCriteria(x) { //changes variable to true if it was checked on
         if (x == "toilets") {
             toilets = true
-            console.log('toilets:' + toilets)
         } else if (x == "cafe") {
             cafe = true
-            console.log('cafe:' + cafe )
         } else if (x == "parking") {
             parking = true
-            console.log('parking' + parking)
         } else if (x == "cycling") {
             cyclistFriendly = true
-            console.log('Cycling' + cyclistFriendly)
         }
     });
 
-    let results = identifyPark(area, size, toilets, cafe, parking, cyclistFriendly)
-
+    let results = identifyPark(area, size, toilets, cafe, parking, cyclistFriendly);
+    
         function identifyPark(area, size, toilets, cafe, parking, cyclistFriendly) {
             let recommendation = [];
             for (var i = 0; i < arrayOfParks.length; i++) {
@@ -119,14 +113,20 @@ function submitForm() {
             } else {
                 return "Sorry, but we are unable to suggest a park that matches those specific criteria. Please try again.";
             }
-        }
-    
-    document.getElementById("results-text").innerHTML = results
-    
+        };
 
-    return false
-}
+    localStorage.setItem("results", results);
     
+    resultsPage = "./results.html";
+    window.open(resultsPage);  
+
+   return results
+};
+
+
+function retrieveData() {
+   document.getElementById("results-text").innerHTML = localStorage.getItem("results")
+}
 
 
 

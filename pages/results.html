@@ -18,7 +18,7 @@
     />
   </head>
 
-  <body>
+  <body onload="retrieveData();">
     <!-- nav bar -->
     <nav>
       <ul>
@@ -31,17 +31,22 @@
       <div class="page-content">
         <h2>Based on your park preferences, we recommend...</h2>
 
-        <div class="results-image">
+        <div class="results-box">
+            <!-- park results -->
+          <div>
+            <p id="results-text">Results Placeholder</p>
+          </div>
+
+          <div class="results-image">
           <!-- image -->
-          <img
-            src="https://i2.wp.com/www.londoncitycalling.com/wp-content/uploads/2016/04/Peace-Pergola-Battersea-Park.jpg?fit=1024%2C683&ssl=1"
-            alt="image of Battersea Park Pergola"
-            class="results-image"
-          />
+            <img
+              src="https://i2.wp.com/www.londoncitycalling.com/wp-content/uploads/2016/04/Peace-Pergola-Battersea-Park.jpg?fit=1024%2C683&ssl=1"
+              alt="image of Battersea Park Pergola"
+              class="results-image"
+            />
+          </div>
         </div>
 
-        <!-- park results -->
-        <!-- <p id='results-text'>Results Placeholder</p> -->
         <div class="d-grid gap-2 col-5 mx-auto">
           <a
             class="btn btn-primary"
@@ -62,6 +67,7 @@
       </p>
     </footer>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js">
+    </script>
   </body>
 </html>

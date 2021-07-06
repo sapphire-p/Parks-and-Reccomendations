@@ -136,8 +136,7 @@ h2 {
 }
 */
 
-.btn,
-.btn btn-primary {
+.btn, .btn btn-primary {
   font-size: 1.9vw;
 }
 
@@ -179,6 +178,13 @@ form ul li {
   text-align: center;
   margin: 0%;
 }
+
+.results-box {
+  display: flex;
+  padding: 5px;
+  
+}
+
 
 /*
 html {
