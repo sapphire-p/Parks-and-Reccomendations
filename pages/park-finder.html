@@ -1,80 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Parks Finder</title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <head>
+    <title>Park Finder - Parks & Recommendations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <div>
+  <body>
     <!-- nav bar -->
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/pages/park-finder.html">Park Finder</a></li>
-    </ul>
-  </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./park-finder.html">Park Finder</a></li>
+      </ul>
+    </nav>
 
-  <div>
-    <h1>Park Finder </h1>
-    <h2>Enter your preferences and we will find you the perfect park</h2>
+    <div class="background">
+      <div class="page-content">
+        <h1>Park Finder</h1>
+        <h2>Enter your preferences and we'll recommend the perfect park!</h2>
 
-    <!-- Form action="../pages/results.html" -->
-    <form id="theform"  method="GET" >  
+        <!-- Form -->
+        <form id="theform" method="GET" Form action="./pages/results.html">
+          <!-- Area -->
+          <ul>
+            <li>
+              <label for="areacriteria">Area &nbsp </label>
+              <select class="form-style" id="areacriteria" name="area">
+                <option value="North">North London</option>
+                <option value="South">South London</option>
+                <option value="East">East London</option>
+                <option value="West">West London</option>
+              </select>
+            </li>
 
-      <!-- Area -->
-      <label for="areacriteria">Area</label>
-      <select id="areacriteria" name="area">
-        <option value="North">North</option>
-        <option value="South">South</option>
-        <option value="East">East</option>
-        <option value="West">West</option>
-      </select>
+            <!-- Size -->
+            <li>
+              <label for="sizecriteria">Size &nbsp</label>
+              <select class="form-style" id="sizecriteria" name="size">
+                <option value="Small">Small (0-69 hectares)</option>
+                <option value="Medium">Med (70-84 hectares)</option>
+                <option value="Large">Large (85+ hectares)</option>
+              </select>
+            </li>
 
-      <!-- Size -->
-      <label for="sizecriteria">Area</label>
-      <select id="sizecriteria" name="size">
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-      </select>
+            <!-- Toilets -->
+            <li>
+              <label for="toiletcriteria">Toilets &nbsp</label><br />
+              <input
+                type="checkbox"
+                id="toiletcriteria"
+                name="criteria"
+                value="toilets"
+              />
+            </li>
 
-      <!-- Toilets -->
-      <label for="toiletcriteria">Toilets</label><br>
-      <input type="checkbox" id="toiletcriteria" name="criteria" value="toilets">
-      
-      <!-- Cafe -->
-      <label for="cafecriteria">Cafe</label><br>
-      <input type="checkbox" id="cafecriteria" name="criteria" value="cafe">
-      
-      <!-- Parking -->
-      <label for="parkingcriteria"> Parking</label>
-      <input type="checkbox" id="parkingcriteria" name="criteria" value="parking"> 
-    
+            <!-- Cafe -->
+            <li>
+              <label for="cafecriteria">Cafe &nbsp</label><br />
+              <input
+                type="checkbox"
+                id="cafecriteria"
+                name="criteria"
+                value="cafe"
+              />
+            </li>
 
-      <!-- Cyclist Friendly -->
-      <label for="cyclingcriteria">Cycling Friendly </label>
-      <input type="checkbox" id="cyclingcriteria" name="criteria" value="cycling"> 
+            <!-- Parking -->
+            <li>
+              <label for="parkingcriteria">Parking &nbsp</label>
+              <input
+                type="checkbox"
+                id="parkingcriteria"
+                name="criteria"
+                value="parking"
+              />
+            </li>
 
+            <!-- Cyclist Friendly -->
+            <li>
+              <label for="cyclingcriteria">Cycling Friendly &nbsp</label>
+              <input
+                type="checkbox"
+                id="cyclingcriteria"
+                name="criteria"
+                value="cycling"
+              />
+            </li>
 
-      <input value="Submit" type="button" onclick="submitForm()">
-      <input type="reset" value="Clear">
-    </form>
-      
-  </div>
+            <li>
+              <input
+                class="btn btn-primary"
+                type="submit"
+                value="Submit"
+                role="button"
+                onclick="submitForm()"
+              />&nbsp &nbsp
+              <input
+                class="btn btn-primary"
+                type="reset"
+                role="button"
+                value="Clear"
+              />
+            </li>
+          </ul>
+        </form>
+        <div>
+          <p id="results-text">Results Placeholder</p>
+        </div>
+      </div>
+    </div>
 
-  <div>
-    <p id='results-text'>Results Placeholder</p>
-  </div>
+    <!-- Footer -->
+    <footer>
+      <p class="footer">
+        Brought to you by Charlotte, Danielle, Emily, Francesca and Sapphire for
+        Code First Girls
+      </p>
+    </footer>
 
-  <div>
-    <p>
-      <!-- Footer -->
-      <div class="footer">
-      Brought to you by Charlotte, Danielle, Emily, Francesca and Sapphire for Code First Girls
-    </p>
-  </div>
-
-  <script src="../js/app.js"></script>
-</body>
-  
+    <script src="../js/app.js"></script>
+  </body>
 </html>

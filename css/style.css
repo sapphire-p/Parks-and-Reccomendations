@@ -1,47 +1,205 @@
-/* CSS Styling to go in here */
+/* CSS Styling Go here */
 
-/* nav bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: dimgrey;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  /* need to choose font and figure out how to add house icon in place of home copy */
+nav li {
+  float: left;
+}
 
-  li a {
-    display: block;
-    border-radius: 30px;
-    color: grey;
-    text-align: center;
-    padding: 14px 16px;
-    margin: 10px;
-    text-decoration: none;
-  }
-  
-  /* Changes the link color to light grey on hover */
-  li a:hover {
-    background-color: white;
-    border-color: #d3d3d3;
-    border: 2px solid grey;
-  }
+/* need to choose font and figure out how to add house icon in place of home copy */
+
+nav li a {
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 10px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: dimgrey;
+}
+
+/* Changes the link color to light grey on hover */
+nav li a:hover {
+  background-color: white;
+  border-color: #d3d3d3;
+  border: 2px solid grey;
+}
 
 /* footer */
 
-  .footer {
-      background-color: white;
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
-      color: grey;
-  }
+.footer {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: dimgrey;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* BODY */
+
+p, li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: dimgrey;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 4vw;
+  color: dimgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0%;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 2.5vw;
+  color: dimgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0%;
+}
+
+.background {
+  border: 0px;
+  padding: 0%;
+  margin: 0%;
+  height: 90vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  background-image: url("../images/Park_panorama_transparent.png");
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*
+.page-content {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+*/
+
+.btn,
+.btn btn-primary {
+  font-size: 1.9vw;
+}
+
+.form-style {
+  display: inline-block;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: dimgrey;
+  font-size: 1.9vw;
+}
+
+form ul li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: dimgrey;
+  font-size: 1.9vw;
+}
+
+.results-image {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height: 30vw;
+}
+
+.results-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.9vw;
+  color: dimgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0%;
+}
+
+/*
+html {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+*/
