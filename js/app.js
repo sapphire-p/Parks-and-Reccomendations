@@ -45,6 +45,12 @@ arrayOfParks.push(crystalPalacePark);
 let barnsburyWood = new ParkObject("Barnsbury Wood", "Central", "Small", false, false, false, false, "Highbury & Islington", "Barnsbury Wood is London's smallest local nature reserve. The hidden woodland was eventually abandoned to nature and is now home to a wealth of wildlife.");
 arrayOfParks.push(barnsburyWood);
 
+let victoriaPark = new ParkObject("Victoria Park", "East", "Large", true, true, true, true, "Hackney Wick", "Nicknamed Vicky Park or the People's Park, Victoria Park is a park in the London Borough of Tower Hamlets in East London, England. It is the largest park in Tower Hamlets and one of the most visited green spaces in London – approximately 9 million people visit each year.");
+arrayOfParks.push(victoriaPark);
+
+let alexandraPark = new ParkObject("Alexandra Park", "North", "Medium", false, false, false, true, " Alexandra Palace", "Alexandra Park is situated in the Borough of Haringey in north London, adjacent to Hornsey, Muswell Hill and Wood Green. It has a mixture of hilly and flat terrain. Along with the neighbouring Alexandra Palace, the park was named in 1863, the year of the marriage of Alexandra of Denmark to the Prince of Wales who became King Edward VII.");
+arrayOfParks.push(alexandraPark);
+
 
 // console.log(arrayOfParks); // To demonstrate, this displays the arrayOfParks array in the JS dev console
 
@@ -126,6 +132,8 @@ function submitForm() {
 
 function retrieveData() {
    document.getElementById("results-text").innerHTML = localStorage.getItem("results")
+
+
 }
 
 
