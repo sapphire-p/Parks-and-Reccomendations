@@ -16,7 +16,7 @@ class ParkObject {
         this.cyclistFriendly = cyclistFriendly;
         this.nearestStation = nearestStation;
         this.description = description;
-        this.image = image
+        this.image = image;
     }
 }
 
@@ -25,31 +25,31 @@ let arrayOfParks = []; // This creates an empty array which will contain all of 
 // Each of the below creates a new park object (using the ParkObject class template above)
 // The new park object is then pushed into the arrayOfParks array
 
-let greenwichPark = new ParkObject("Greenwich Park", "South", "Medium", true, true, true, true, "North Greenwich", "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London. ", `<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Crystal_Palace_Park.jpg"`);
+let greenwichPark = new ParkObject("Greenwich Park", "South", "Medium", true, true, true, true, "North Greenwich", "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London. ", `https://images.unsplash.com/photo-1557822477-ec8d8bbbcd2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80`);
 arrayOfParks.push(greenwichPark);
 
-let claphamCommon = new ParkObject("Clapham Common", "West", "Large", true, true, false, true, "Clapham Common", "Clapham Common is a large triangular urban park in Clapham, south London, England. It is 220 acres of green space, with three ponds and a Victorian bandstand. ")
+let claphamCommon = new ParkObject("Clapham Common", "West", "Large", true, true, false, true, "Clapham Common", "Clapham Common is a large triangular urban park in Clapham, south London, England. It is 220 acres of green space, with three ponds and a Victorian bandstand.", `https://images.unsplash.com/photo-1588714477688-cf28a50e94f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80` );
 arrayOfParks.push(claphamCommon);
 
-let batterseaPark = new ParkObject("Battersea Park", "West", "Medium", true, true, true, true, "Queenstown Road (Battersea)", "Battersea Park is a 200-acre green space at Battersea in the London Borough of Wandsworth. It is situated on the south bank of the River Thames opposite Chelsea and occupies marshland reclaimed from the Thames and land formerly used for market gardens. ");
+let batterseaPark = new ParkObject("Battersea Park", "West", "Medium", true, true, true, true, "Queenstown Road (Battersea)", "Battersea Park is a 200-acre green space at Battersea in the London Borough of Wandsworth. It is situated on the south bank of the River Thames opposite Chelsea and occupies marshland reclaimed from the Thames and land formerly used for market gardens. ", `https://images.unsplash.com/photo-1560366620-09c73196edd7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80`);
 arrayOfParks.push(batterseaPark);
 
-let hydePark = new ParkObject("Hyde Park", "Central", "Large", true, true, true, true, "Hyde Park Corner", "Hyde Park is a Grade I-listed major park in central London and the largest of the Royal Parks in central London. The park is divided by the Serpentine and the Long Water lakes. ");
+let hydePark = new ParkObject("Hyde Park", "Central", "Large", true, true, true, true, "Hyde Park Corner", "Hyde Park is a Grade I-listed major park in central London and the largest of the Royal Parks in central London. The park is divided by the Serpentine and the Long Water lakes. ", `https://images.unsplash.com/photo-1569921479014-68ed6535228d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80`);
 arrayOfParks.push(hydePark);
 
-let nunheadCemetery = new ParkObject("Nunhead Cemetery", "South", "Small", false, false, true, false, "Nunhead", "Nunhead Cemetery is one of the 'Magnificent Seven' large private cemeteries in London. It was originally known as All Saints' Cemetery, consecrated in 1840 and is a local nature reserve. ");
+let nunheadCemetery = new ParkObject("Nunhead Cemetery", "South", "Small", false, false, true, false, "Nunhead", "Nunhead Cemetery is one of the 'Magnificent Seven' large private cemeteries in London. It was originally known as All Saints' Cemetery, consecrated in 1840 and is a local nature reserve. ", `https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FNunhead_Cemetery&psig=AOvVaw1Tc0JVr8rozHxN0G8wYekv&ust=1625863370693000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCLD5jpWr1PECFQAAAAAdAAAAABAD`);
 arrayOfParks.push(nunheadCemetery);
 
-let crystalPalacePark = new ParkObject("Crystal Palace Park", "South", "Medium", true, true, true, true, "Crystal Palace", "Former site of the Crystal Palace which was built as part of the 1851 Great Exhibition. Today the park consists of statues of prehistoric monsters, geological strata, open parkland and pathways, sport and recreation facilities, an animal farm, playground, maze and cafe. ");
+let crystalPalacePark = new ParkObject("Crystal Palace Park", "South", "Medium", true, true, true, true, "Crystal Palace", "Former site of the Crystal Palace which was built as part of the 1851 Great Exhibition. Today the park consists of statues of prehistoric monsters, geological strata, open parkland and pathways, sport and recreation facilities, an animal farm, playground, maze and cafe. ", `https://cdn.pixabay.com/photo/2013/01/13/11/04/crystal-palace-74760_1280.jpg`);
 arrayOfParks.push(crystalPalacePark);
 
-let barnsburyWood = new ParkObject("Barnsbury Wood", "Central", "Small", false, false, false, false, "Highbury & Islington", "Barnsbury Wood is London's smallest local nature reserve. The hidden woodland was eventually abandoned to nature and is now home to a wealth of wildlife. ");
+let barnsburyWood = new ParkObject("Barnsbury Wood", "Central", "Small", false, false, false, false, "Highbury & Islington", "Barnsbury Wood is London's smallest local nature reserve. The hidden woodland was eventually abandoned to nature and is now home to a wealth of wildlife." ,`https://images.unsplash.com/photo-1584876844373-375ab76d71dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1268&q=80`);
 arrayOfParks.push(barnsburyWood);
 
-let victoriaPark = new ParkObject("Victoria Park", "East", "Large", true, true, true, true, "Hackney Wick", "Nicknamed Vicky Park or the People's Park, Victoria Park is a park in the London Borough of Tower Hamlets in East London, England. It is the largest park in Tower Hamlets and one of the most visited green spaces in London – approximately 9 million people visit each year. ");
+let victoriaPark = new ParkObject("Victoria Park", "East", "Large", true, true, true, true, "Hackney Wick", "Nicknamed Vicky Park or the People's Park, Victoria Park is a park in the London Borough of Tower Hamlets in East London, England. It is the largest park in Tower Hamlets and one of the most visited green spaces in London – approximately 9 million people visit each year. ", `https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Victoria_Park%2C_Edinburgh_in_spring.jpg/1200px-Victoria_Park%2C_Edinburgh_in_spring.jpg`);
 arrayOfParks.push(victoriaPark);
 
-let alexandraPark = new ParkObject("Alexandra Park", "North", "Medium", false, false, false, true, " Alexandra Palace", "Alexandra Park is situated in the Borough of Haringey in north London, adjacent to Hornsey, Muswell Hill and Wood Green. It has a mixture of hilly and flat terrain. Along with the neighbouring Alexandra Palace, the park was named in 1863, the year of the marriage of Alexandra of Denmark to the Prince of Wales who became King Edward VII. ");
+let alexandraPark = new ParkObject("Alexandra Park", "North", "Medium", false, false, false, true, " Alexandra Palace", "Alexandra Park is situated in the Borough of Haringey in north London, adjacent to Hornsey, Muswell Hill and Wood Green. It has a mixture of hilly and flat terrain. Along with the neighbouring Alexandra Palace, the park was named in 1863, the year of the marriage of Alexandra of Denmark to the Prince of Wales who became King Edward VII. ", `https://upload.wikimedia.org/wikipedia/commons/5/50/Alexandra_park_avenue.jpg`);
 arrayOfParks.push(alexandraPark);
 
 
@@ -112,7 +112,7 @@ function submitForm() {
                     && arrayOfParks[i].parking === parking
                     && arrayOfParks[i].cyclistFriendly === cyclistFriendly
                 ) {
-                    recommendation.push("!", arrayOfParks[i].name,"!", arrayOfParks[i].nearestStation,"!", arrayOfParks[i].description)
+                    recommendation.push("!", arrayOfParks[i].name,"!", arrayOfParks[i].nearestStation,"!", arrayOfParks[i].description, "!", arrayOfParks[i].image)
                 }
             }
             if (recommendation.length >= 1) {
@@ -125,63 +125,150 @@ function submitForm() {
     localStorage.setItem("results", results);
     
     resultsPage = "./results.html";
-    window.open(resultsPage);  
+    window.open(resultsPage, "_self");  
 
    return false
 };
 
 
 function retrieveData() {
-    let resultsForSplice = localStorage.getItem("results")
+    let resultsFromStorage = localStorage.getItem("results")
 
-    let splicedResults = resultsForSplice.split("!,")
+    let arrayOfResults = resultsFromStorage.split("!,")
 
-    console.log(splicedResults)
+    arrayOfResults.shift();
 
-    if (splicedResults.length == 1){
-        document.getElementById("results-text").innerHTML = splicedResults 
-    } else if (splicedResults.length == 4){
-        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1);
-        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1);
-        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1);
-    } else if (splicedResults.length == 7) {
-        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1);
-        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1);
-        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1);
+    console.log(arrayOfResults)
 
-        title = splicedResults[4].slice(0,-1);
-        station = splicedResults[5].slice(0,-1);
-        description = splicedResults[6].slice(0,-1); 
+    document.body.onload = addElement();
 
-        document.body.onload = addElement();
+    function addElement () {
+        // create a new div elements
+            let newDiv = document.createElement("div");
 
-            function addElement () {
-            // create a new div element
-                let newDiv = document.createElement("div");
+            noOfResults = Math.floor(arrayOfResults.length/4)
 
-                newDiv.setAttribute("class", "card mb-3");
-                newDiv.setAttribute("style", "max-width: 540px;" )
-            
-                newDiv.innerHTML = `
+            if (noOfResults == 0){
+                newDiv.innerHTML = resultsFromStorage
+                document.getElementById("results-box").appendChild(newDiv) 
+            } else if (noOfResults == 1) {
+                    title = arrayOfResults[0].slice(0,-1);
+                    station = arrayOfResults[1].slice(0,-1);
+                    description = arrayOfResults[2].slice(0,-1); 
+                    image = arrayOfResults[3]
+
+                    newDiv.setAttribute("class", "card mb-3");
+                    newDiv.setAttribute("style", "max-width: 540px;" )
+                        
+                    newDiv.innerHTML = `
                             <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="${image}"class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="results-title">${title}</h5>
+                                        <p class="card-text" id="results-description">${description}</p>
+                                        <p class="card-text" id="nearest-station"><small class="text-muted">Nearest Station: ${station}</small></p>
+                                    </div>
+                                </div>
+                            </div> `;
+        
+                    document.getElementById("results-box").appendChild(newDiv)
+    
+            } else if (noOfResults == 2){
+                title = arrayOfResults[0].slice(0,-1);
+                station = arrayOfResults[1].slice(0,-1);
+                description = arrayOfResults[2].slice(0,-1); 
+                image = arrayOfResults[3]
+                title2 = arrayOfResults[4].slice(0,-1);
+                station2 = arrayOfResults[5].slice(0,-1);
+                description2 = arrayOfResults[6].slice(0,-1); 
+                image2 = arrayOfResults[7]
+
+                // newDiv.setAttribute("class", "results-box");
+                // newDiv.setAttribute("style", "max-width: 540px;" )
+                    
+                newDiv.innerHTML = `
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Crystal_Palace_Park.jpg"class="img-fluid rounded-start" alt="...">
+                                <img src="${image}"class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title" id="results-title">${title}</h5>
                                     <p class="card-text" id="results-description">${description}</p>
-                                    <p class="card-text" id="nearest-station"><small class="text-muted">${station}</small></p>
+                                    <p class="card-text" id="nearest-station"><small class="text-muted">Nearest Station: ${station}</small></p>
                                 </div>
                             </div>
-                        </div> `;
+                        </div> 
+                    </div>
+                     
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="${image2}"class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="results-title">${title2}</h5>
+                                    <p class="card-text" id="results-description">${description2}</p>
+                                    <p class="card-text" id="nearest-station"><small class="text-muted">Nearest Station: ${station2}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+    
+                document.getElementById("results-box").appendChild(newDiv)
+                
+            }
 
-            document.getElementById("results-box").appendChild(newDiv)
-        };
-
-              
+               
     }
 }
+
+
+
+//         document.getElementById("results-title").innerHTML = arrayOfResults[1].slice(0,-1);
+//         document.getElementById("nearest-station").innerHTML = arrayOfResults[2].slice(0,-1);
+//         document.getElementById("results-description").innerHTML = arrayOfResults[3].slice(0,-1);
+//         } else if  arrayOfResults.length == 7) {
+//         document.getElementById("results-title").innerHTML = arrayOfResults[1].slice(0,-1);
+//         document.getElementById("nearest-station").innerHTML = arrayOfResults[2].slice(0,-1);
+//         document.getElementById("results-description").innerHTML = arrayOfResults[3].slice(0,-1);
+
+    
+
+//     document.body.onload = addTwoElements();
+
+//         function addTwoElements() {
+//         // create a new div element
+//             let newDiv = document.createElement("div");
+
+//             newDiv.setAttribute("class", "card mb-3");
+//             newDiv.setAttribute("style", "max-width: 540px;" )
+        
+//             newDiv.innerHTML = `
+//                     <div class="row g-0">
+//                         <div class="col-md-4">
+//                             <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Crystal_Palace_Park.jpg"class="img-fluid rounded-start" alt="...">
+//                         </div>
+//                         <div class="col-md-8">
+//                             <div class="card-body">
+//                                 <h5 class="card-title" id="results-title">${title}</h5>
+//                                 <p class="card-text" id="results-description">${description}</p>
+//                                 <p class="card-text" id="nearest-station"><small class="text-muted">${station}</small></p>
+//                             </div>
+//                         </div>
+//                     </div> `;
+
+//         document.getElementById("results-box").appendChild(newDiv)
+//     };
+
+            
+//     }
+// }
 
 
 

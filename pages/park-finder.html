@@ -28,104 +28,107 @@
     </nav>
 
     <div class="background">
-      <div class="page-content">
+      <div>
         <h1>Park Finder</h1>
         <h2>Enter your preferences and we'll recommend the perfect park!</h2>
 
         <!-- Form Form action="./results.html"-->
-        <form id="theform" method="GET" >
-          <!-- Area -->
-          <ul>
-            <li>
-              <label for="areacriteria">Area &nbsp </label>
-              <select class="form-style" id="areacriteria" name="area">
-                <option value="North">North London</option>
-                <option value="South">South London</option>
-                <option value="Central">Central London</option>
-                <option value="East">East London</option>
-                <option value="West">West London</option>
-              </select>
-            </li>
+        <div class="form-container">
+          <form id="theform" method="GET">
+            <!-- Area -->
+            <ul>
+              <li>
+                <label for="areacriteria">Area &nbsp </label>
+                <select class="form-style" id="areacriteria" name="area">
+                  <option value="North">North London</option>
+                  <option value="South">South London</option>
+                  <option value="Central">Central London</option>
+                  <option value="East">East London</option>
+                  <option value="West">West London</option>
+                </select>
+              </li>
 
-            <!-- Size -->
-            <li>
-              <label for="sizecriteria">Size &nbsp</label>
-              <select class="form-style" id="sizecriteria" name="size">
-                <option value="Small">Small (0-69 hectares)</option>
-                <option value="Medium">Med (70-84 hectares)</option>
-                <option value="Large">Large (85+ hectares)</option>
-              </select>
-            </li>
+              <!-- Size -->
+              <li>
+                <label for="sizecriteria">Size &nbsp</label>
+                <select class="form-style" id="sizecriteria" name="size">
+                  <option value="Small">Small (0-69 hectares)</option>
+                  <option value="Medium">Med (70-84 hectares)</option>
+                  <option value="Large">Large (85+ hectares)</option>
+                </select>
+              </li>
 
-            <!-- Toilets -->
-            <li>
-              <label for="toiletcriteria">Toilets &nbsp</label><br />
-              <input
-                type="checkbox"
-                id="toiletcriteria"
-                name="criteria"
-                value="toilets"
-              />
-            </li>
+              <!-- Toilets -->
+              <li>
+                <label for="toiletcriteria">Toilets &nbsp</label><br />
+                <input
+                  type="checkbox"
+                  id="toiletcriteria"
+                  name="criteria"
+                  value="toilets"
+                />
+              </li>
 
-            <!-- Cafe -->
-            <li>
-              <label for="cafecriteria">Cafe &nbsp</label><br />
-              <input
-                type="checkbox"
-                id="cafecriteria"
-                name="criteria"
-                value="cafe"
-              />
-            </li>
+              <!-- Cafe -->
+              <li>
+                <label for="cafecriteria">Cafe &nbsp</label><br />
+                <input
+                  type="checkbox"
+                  id="cafecriteria"
+                  name="criteria"
+                  value="cafe"
+                />
+              </li>
 
-            <!-- Parking -->
-            <li>
-              <label for="parkingcriteria">Parking &nbsp</label>
-              <input
-                type="checkbox"
-                id="parkingcriteria"
-                name="criteria"
-                value="parking"
-              />
-            </li>
+              <!-- Parking -->
+              <li>
+                <label for="parkingcriteria">Parking &nbsp</label>
+                <input
+                  type="checkbox"
+                  id="parkingcriteria"
+                  name="criteria"
+                  value="parking"
+                />
+              </li>
 
-            <!-- Cyclist Friendly -->
-            <li>
-              <label for="cyclingcriteria">Cycling Friendly &nbsp</label>
-              <input
-                type="checkbox"
-                id="cyclingcriteria"
-                name="criteria"
-                value="cycling"
-              />
-            </li>
-
-            <li>
-              <input
-                class="btn btn-primary"
-                type="submit"
-                value="Submit"
-                role="button"
-                onclick="submitForm();"
-              />&nbsp &nbsp
-              <input
-                class="btn btn-primary"
-                type="reset"
-                role="button"
-                value="Clear"
-              />
-            </li>
-          </ul>
-        </form>
+              <!-- Cyclist Friendly -->
+              <li>
+                <label for="cyclingcriteria">Cycling Friendly &nbsp</label>
+                <input
+                  type="checkbox"
+                  id="cyclingcriteria"
+                  name="criteria"
+                  value="cycling"
+                />
+              </li>
+              <div class="button-container">
+                <li>
+                  <input
+                    class="btn btn-primary"
+                    type="submit"
+                    value="Submit"
+                    role="button"
+                    onclick="submitForm();"
+                  />&nbsp &nbsp
+                  <input
+                    class="btn btn-primary"
+                    type="reset"
+                    role="button"
+                    value="Clear"
+                  />
+                </li>
+              </div>
+            </ul>
+          </form>
+        </div>
       </div>
     </div>
 
     <!-- Footer -->
     <footer>
       <p class="footer">
-        Brought to you by Charlotte, Danielle, Francesca and Sapphire for
-        Code First Girls
+        Brought to you by Charlotte, Francesca and Sapphire for Code
+        First Girls
       </p>
     </footer>
 
