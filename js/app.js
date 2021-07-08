@@ -125,7 +125,7 @@ function submitForm() {
     localStorage.setItem("results", results);
     
     resultsPage = "./results.html";
-    window.open(resultsPage, "_self");  
+    window.open(resultsPage);  
 
    return false
 };
