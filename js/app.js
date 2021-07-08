@@ -6,7 +6,7 @@
 // It creates a class of object (called ParkObject), which acts as a template for the creation of objects that each represent a park.
 
 class ParkObject {
-    constructor(name, area, size, toilets, cafe, parking, cyclistFriendly, nearestStation, description) {
+    constructor(name, area, size, toilets, cafe, parking, cyclistFriendly, nearestStation, description, image) {
         this.name = name;
         this.area = area;
         this.size = size;
@@ -16,6 +16,7 @@ class ParkObject {
         this.cyclistFriendly = cyclistFriendly;
         this.nearestStation = nearestStation;
         this.description = description;
+        this.image = image
     }
 }
 
@@ -24,7 +25,7 @@ let arrayOfParks = []; // This creates an empty array which will contain all of 
 // Each of the below creates a new park object (using the ParkObject class template above)
 // The new park object is then pushed into the arrayOfParks array
 
-let greenwichPark = new ParkObject("Greenwich Park", "South", "Medium", true, true, true, true, "North Greenwich", "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London. ");
+let greenwichPark = new ParkObject("Greenwich Park", "South", "Medium", true, true, true, true, "North Greenwich", "Greenwich Park is one of the Royal Parks of London and is situated in the south-east of the city. Its hills offer excellent views over the River Thames, the Isle of Dogs and the City of London. ", `<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Crystal_Palace_Park.jpg"`);
 arrayOfParks.push(greenwichPark);
 
 let claphamCommon = new ParkObject("Clapham Common", "West", "Large", true, true, false, true, "Clapham Common", "Clapham Common is a large triangular urban park in Clapham, south London, England. It is 220 acres of green space, with three ponds and a Victorian bandstand. ")
@@ -140,18 +141,46 @@ function retrieveData() {
     if (splicedResults.length == 1){
         document.getElementById("results-text").innerHTML = splicedResults 
     } else if (splicedResults.length == 4){
-        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1)
-        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1)
-        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1)
-    } else {
-        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1)
-        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1)
-        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1)
-        document.getElementById("results-title-2").innerHTML = splicedResults[4].slice(0,-1)
-        document.getElementById("nearest-station-2").innerHTML = splicedResults[5].slice(0,-1)
-        document.getElementById("results-description-2").innerHTML = splicedResults[6].slice(0,-1)
-    }
+        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1);
+        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1);
+        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1);
+    } else if (splicedResults.length == 7) {
+        document.getElementById("results-title").innerHTML = splicedResults[1].slice(0,-1);
+        document.getElementById("nearest-station").innerHTML = splicedResults[2].slice(0,-1);
+        document.getElementById("results-description").innerHTML = splicedResults[3].slice(0,-1);
 
+        title = splicedResults[4].slice(0,-1);
+        station = splicedResults[5].slice(0,-1);
+        description = splicedResults[6].slice(0,-1); 
+
+        document.body.onload = addElement();
+
+            function addElement () {
+            // create a new div element
+                let newDiv = document.createElement("div");
+
+                newDiv.setAttribute("class", "card mb-3");
+                newDiv.setAttribute("style", "max-width: 540px;" )
+            
+                newDiv.innerHTML = `
+                            <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Crystal_Palace_Park.jpg"class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="results-title">${title}</h5>
+                                    <p class="card-text" id="results-description">${description}</p>
+                                    <p class="card-text" id="nearest-station"><small class="text-muted">${station}</small></p>
+                                </div>
+                            </div>
+                        </div> `;
+
+            document.getElementById("results-box").appendChild(newDiv)
+        };
+
+              
+    }
 }
 
 

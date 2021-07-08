@@ -31,29 +31,27 @@
       <div class="page-content">
         <h2>Based on your park preferences, we recommend...</h2>
 
-        <div class="results-box">
+        <div class="results-box" id="results-box">
             <!-- park results -->
           <div>
             <p id="sorry-text"></p>
-            <p id="results-title"></p>
-            <p id="nearest-station"></p>
-            <p id="results-description"></p>
           </div>
 
-          <div>
-            <p id="results-title-2"></p>
-            <p id="nearest-station-2"></p>
-            <p id="results-description-2"></p>
+          <div class="card mb-3" id="main-card" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://i2.wp.com/www.londoncitycalling.com/wp-content/uploads/2016/04/Peace-Pergola-Battersea-Park.jpg?fit=1024%2C683&ssl=1"class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="results-title">Crystal Palace</h5>
+                  <p class="card-text" id="results-description"></p>
+                  <p class="card-text" id="nearest-station"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="results-image">
-          <!-- image -->
-            <img
-              src="https://i2.wp.com/www.londoncitycalling.com/wp-content/uploads/2016/04/Peace-Pergola-Battersea-Park.jpg?fit=1024%2C683&ssl=1"
-              alt="image of Battersea Park Pergola"
-              class="results-image"
-            />
-          </div>
+         
         </div>
 
         <div class="d-grid gap-2 col-5 mx-auto">
@@ -77,6 +75,7 @@
     </footer>
 
     <script src="../js/app.js">
+  
     </script>
   </body>
 </html>
